@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building A Form</title>
+</head>
+<body>
+    <header>
+        <h1>Provide Feedback Form</h1>
+    </header>
+    <main>
+        <form action="submitted.html" method="POST">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="fullName">Full Name:</label>
+                <input type="text" name="fullName" id="fullName" maxlength="32" placeholder="John Doe" required />
+                <br>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="johndoe123@gmail.com" required />
+                <br>
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" placeholder="*******" minlength="8" maxlength="12" required />
+                <br>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Feedback</legend>
+                <select name="feedback-category" id="feedback-category" required>
+                <option value=""></option>
+                <option value="experience">How was your experience?</option>
+                <option value="suggestion">Any suggestions?</option>
+                <option value="critiques">Any issues found?</option>
+                </select> 
+                <br>
+                <h2>Preferred Contact Method</h2>
+                <label for="email-radio">Email</label>
+                <input type="radio" name="contact" id="email-radio" value="email" checked/>
+                <label for="text-radio">Text</label>
+                <input type="radio" name="contact" id="text-radio" value="text" />
+                <label for="no-contact-radio">No Contact</label>
+                <input type="radio" name="contact" id="no-contact-radio" value="no-contact" />
+                <br>
+                <h2>Additional Interests</h2>
+                <label for="coding">Coding</label>
+                <input type="checkbox" name="interests" id="coding" value="coding"/>
+                <label for="testing">Testing</label>
+                <input type="checkbox" name="interests" id="testing" value="testing"/>
+                <label for="data-analysis">Data Analysis</label>
+                <input type="checkbox" name="interests" id="data-analysis" value="data-analysis"/>
+            </fieldset>
+            <fieldset>
+                <legend>Comments</legend>
+                <textarea id="comments" name="comments" rows="6" cols="30" placeholder="Enter comments here..." maxlength="240"></textarea>
+            </fieldset>  
+            <input type="submit" value="Submit">
+        </form>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
